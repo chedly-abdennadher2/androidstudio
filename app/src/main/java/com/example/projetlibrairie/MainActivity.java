@@ -2,6 +2,7 @@ package com.example.projetlibrairie;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
@@ -25,10 +26,20 @@ public class MainActivity extends AppCompatActivity {
     TextInputEditText nom;
     TextInputEditText prenom;
     MaterialButton save;
+    Button adherentliste;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        adherentliste=(Button) findViewById(R.id.adhliste);
+        adherentliste.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(MainActivity.this, listeadherent.class);
+                startActivity(intent);
+
+            }
+        });
      nom=(TextInputEditText) findViewById(R.id.nom);
      prenom=(TextInputEditText)  findViewById(R.id.prenom);
      save=(MaterialButton) findViewById(R.id.save);

@@ -13,32 +13,32 @@
         android:orientation="vertical">
 
 
+        <Button
+            android:id="@+id/adhliste"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="adherentlist"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="228dp" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/nom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-     />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/prenom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-  />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/prenom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-
-<com.google.android.material.button.MaterialButton
-android:id="@+id/save"
-android:text="save"
-android:layout_alignParentBottom="true"
-android:minHeight="60dp"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="save" />
 
     </LinearLayout>
 
 
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
