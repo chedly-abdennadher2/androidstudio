@@ -23,10 +23,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 public class MainActivity extends AppCompatActivity {
-    TextInputEditText nom;
-    TextInputEditText prenom;
-    MaterialButton save;
     Button adherentliste;
+    Button ajouteradherent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,38 +38,16 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-     nom=(TextInputEditText) findViewById(R.id.nom);
-     prenom=(TextInputEditText)  findViewById(R.id.prenom);
-     save=(MaterialButton) findViewById(R.id.save);
-        RetrofitService retrofitService =new RetrofitService();
-     AdherentApi adherentApi=   retrofitService.getRetrofit().create(AdherentApi.class);
 
-     save.setOnClickListener(new View.OnClickListener() {
-         @Override
-         public void onClick(View view) {
-            String name=String.valueOf(nom.getText());
-            String lastname=String.valueOf(prenom.getText());
-             Adherent adh=new Adherent();
-             adh.setNom(name);
-             adh.setPrenom(lastname);
-             adherentApi.save(adh).enqueue(new Callback<Adherent>(){
+        ajouteradherent=(Button) findViewById(R.id.adhajout);
+        ajouteradherent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(MainActivity.this, ajouteradherent.class);
+                startActivity(intent);
 
-                 @Override
-                 public void onResponse(Call<Adherent> call, Response<Adherent> response) {
-                     Toast.makeText(MainActivity.this,"success",Toast.LENGTH_SHORT).show();
+            }
+        });
 
-                 }
-                 @Override
-                 public void onFailure(Call<Adherent> call, Throwable t) {
-                     Logger.getLogger(MainActivity.class.getName()).log(Level.SEVERE,t.getMessage(),t);
-                     Toast.makeText(MainActivity.this,t.getMessage(),Toast.LENGTH_SHORT).show();
-
-                 }
-             }
-             );
-
-         }
-
-     });
     }
 }
