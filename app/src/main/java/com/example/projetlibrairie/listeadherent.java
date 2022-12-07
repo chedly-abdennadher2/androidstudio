@@ -5,8 +5,13 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
+
+import com.google.android.material.button.MaterialButton;
 
 import java.util.List;
 import java.util.logging.Level;
@@ -22,6 +27,7 @@ import retrofit2.Response;
 
 public class listeadherent extends AppCompatActivity {
     RecyclerView recyclerView;
+    MaterialButton retour;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +36,16 @@ public class listeadherent extends AppCompatActivity {
         recyclerView =(RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
          loadadherents();
+         retour=(MaterialButton) findViewById(R.id.retour);
+        retour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(listeadherent.this, MainActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
     }
     private void loadadherents ()
     {   RetrofitService retrofitService =new RetrofitService();

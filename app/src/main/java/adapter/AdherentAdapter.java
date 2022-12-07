@@ -26,7 +26,7 @@ public class AdherentAdapter extends RecyclerView.Adapter<Adherentholder> {
         Adherent adherent = adherents.get(position);
         holder.name.setText(adherent.getNom());
         holder.lastname.setText(adherent.getPrenom());
-
+        holder.id.setText(String.valueOf(adherent.getId_adherent()));
     }
 
     @Override

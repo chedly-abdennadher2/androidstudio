@@ -9,7 +9,7 @@ public interface AdherentApi {
     @GET("/adherent/adherents")
     public Call <List<Adherent>> adherents ();
     @POST("/adherent/add")
-    Call<Adherent> save (@Body Adherent adherent);
-
+    Call<Adherent> saveadh (@Body Adherent adherent);
+//mets ici les méthodes de livre et exemplaire du controlleur
 
 }

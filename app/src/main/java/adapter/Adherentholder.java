@@ -8,11 +8,11 @@ import com.example.projetlibrairie.R;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class Adherentholder  extends RecyclerView.ViewHolder {
-    TextView name,lastname;
+    TextView name,lastname,id;
     public Adherentholder(@NonNull View itemView) {
         super(itemView);
         name=itemView.findViewById(R.id.adherentListItem_name);
         lastname =itemView.findViewById(R.id.adherentListItem_lastname);
-
+       id=itemView.findViewById(R.id.adherentListItem_id);
     }
 }
