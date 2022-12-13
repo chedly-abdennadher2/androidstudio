@@ -40,7 +40,7 @@ public class listeadherent extends AppCompatActivity {
         retour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(listeadherent.this, MainActivity.class);
+                Intent intent =new Intent(listeadherent.this, listeadherent.class);
                 startActivity(intent);
 
             }

@@ -1,44 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:rowCount="7"
-    android:columnCount="3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     >
+
     <TextView
         android:id="@+id/adherentListItem_id"
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="Name"
+        android:text="id"
         android:textColor="@color/black"
-        android:textSize="16sp"
-        />
+        android:layout_margin="20dp"/>
 
     <TextView
         android:id="@+id/adherentListItem_name"
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
         android:text="Name"
         android:textColor="@color/black"
+        android:layout_margin="20dp"
+
         android:textSize="16sp"
  />
 
     <TextView
-        android:id="@+id/adherentListItem_lastname"
+        android:id= "@+id/adherentListItem_lastname"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:paddingBottom="20dp"
+        android:layout_margin="20dp"
         android:text="prenom"
+        android:textColor="@color/black"
         android:textSize="16sp"
- />
 
-
-
-
-</GridLayout>
+        />
+</LinearLayout>
