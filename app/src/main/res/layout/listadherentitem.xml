@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:layout_margin="15dp"
-android:orientation="vertical">
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:rowCount="7"
+    android:columnCount="3"
+    >
     <TextView
         android:id="@+id/adherentListItem_id"
         android:textStyle="bold"
@@ -39,4 +41,4 @@ android:orientation="vertical">
 
 
 
-</LinearLayout>
+</GridLayout>

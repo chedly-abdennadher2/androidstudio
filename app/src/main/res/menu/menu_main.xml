@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.menu.MainActivity">
+    <item
+        android:id="@+id/adherent"
+        android:orderInCategory="100"
+        android:title="adherents"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/Livre"
+        android:orderInCategory="100"
+        android:title="livres"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/Exemplaire"
+        android:orderInCategory="100"
+        android:title="Exemplaires"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/Emprunt"
+        android:orderInCategory="100"
+        android:title="Emprunt"
+        app:showAsAction="never" />
+
+</menu>

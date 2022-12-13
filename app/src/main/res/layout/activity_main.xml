@@ -7,30 +7,7 @@
     tools:context=".MainActivity"
     >
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
 
-
-        <Button
-            android:id="@+id/adhliste"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="adherentlist"
-            tools:layout_editor_absoluteX="100dp"
-            tools:layout_editor_absoluteY="228dp" />
-        <Button
-            android:id="@+id/adhajout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ajouteradherent"
-            tools:layout_editor_absoluteX="100dp"
-            tools:layout_editor_absoluteY="228dp" />
-
-
-
-    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
