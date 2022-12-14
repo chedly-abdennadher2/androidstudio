@@ -18,7 +18,8 @@ public class AdherentAdapter extends RecyclerView.Adapter<Adherentholder> {
                 .inflate(R.layout.listadherentitem, parent, false);
         return new Adherentholder(view);
     }
-    public AdherentAdapter(List<Adherent> adherentliste) {
+    public AdherentAdapter(List<Adherent> adherentliste)
+    {
         this.adherents = adherentliste;
     }
     @Override

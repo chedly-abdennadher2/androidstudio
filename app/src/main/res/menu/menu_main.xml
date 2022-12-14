@@ -22,5 +22,10 @@
         android:orderInCategory="100"
         android:title="Emprunt"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/retour"
+        android:orderInCategory="100"
+        android:title="retour"
+        app:showAsAction="never" />
 
 </menu>

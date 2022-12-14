@@ -60,6 +60,9 @@ public class ajouteradherent extends AppCompatActivity {
                 @Override
                 public void onResponse(Call<Adherent> call, Response<Adherent> response) {
                 Toast.makeText(ajouteradherent.this,"success",Toast.LENGTH_SHORT).show();
+                    Intent intent =new Intent(ajouteradherent.this, AdherentActivity.class);
+                    startActivity(intent);
+
                 }
                 @Override
                 public void onFailure(Call<Adherent> call, Throwable t) {
@@ -73,5 +76,6 @@ public class ajouteradherent extends AppCompatActivity {
             }
 
         });
+
     }
 }

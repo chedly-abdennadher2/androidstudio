@@ -40,7 +40,7 @@ public class listeadherent extends AppCompatActivity {
         retour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(listeadherent.this, listeadherent.class);
+                Intent intent =new Intent(listeadherent.this, AdherentActivity.class);
                 startActivity(intent);
 
             }
@@ -48,7 +48,11 @@ public class listeadherent extends AppCompatActivity {
 
     }
     private void loadadherents ()
-    {   RetrofitService retrofitService =new RetrofitService();
+    {   threadadherent thread=new threadadherent();
+        thread.execute(recyclerView);
+
+        /*
+        RetrofitService retrofitService =new RetrofitService();
         AdherentApi adherentApi=   retrofitService.getRetrofit().create(AdherentApi.class);
         adherentApi.adherents().enqueue(new Callback<List<Adherent>>(){
 
@@ -63,12 +67,15 @@ public class listeadherent extends AppCompatActivity {
                 Toast.makeText(listeadherent.this,t.getMessage(),Toast.LENGTH_SHORT).show();
 
             }});
+*/
 
     }
-    private void populateListView(List<Adherent> adherents) {
+
+
+/*    private void populateListView(List<Adherent> adherents) {
         AdherentAdapter adherentAdapter = new AdherentAdapter(adherents);
         recyclerView.setAdapter(adherentAdapter);
-    }
+    }*/
 
     @Override
     protected void onResume() {
