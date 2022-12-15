@@ -54,14 +54,22 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 }
                 case R.id.Livre: {
+                    Intent intent=new Intent(MainActivity.this,LivreActivity.class);
+                    startActivity(intent);
                     break;
             }
                 case R.id.Exemplaire:{
-
+                    Intent intent=new Intent(MainActivity.this,ExemplaireActivity.class);
+                    startActivity(intent);
                     break;
                 }
                 case R.id.Emprunt: {
-
+                    Intent intent=new Intent(MainActivity.this,EmpruntActivity.class);
+                    startActivity(intent);
+                }
+                case R.id.exit:{
+                    System.exit(0);
+                    break;
                 }
             }
 

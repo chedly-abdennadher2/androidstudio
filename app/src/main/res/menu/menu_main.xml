@@ -27,5 +27,10 @@
         android:orderInCategory="100"
         android:title="retour"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/exit"
+        android:orderInCategory="100"
+        android:title="exit"
+        app:showAsAction="never" />
 
 </menu>

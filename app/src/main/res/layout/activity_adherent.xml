@@ -15,17 +15,31 @@
             android:id="@+id/adhliste"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="adherentlist"
+            android:text="adherent liste"
             tools:layout_editor_absoluteX="100dp"
             tools:layout_editor_absoluteY="228dp" />
         <Button
             android:id="@+id/adhajout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ajouteradherent"
+            android:text="ajouter adherent"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="228dp" />
+        <Button
+            android:id="@+id/adhmodif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="modifier adherent"
             tools:layout_editor_absoluteX="100dp"
             tools:layout_editor_absoluteY="228dp" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/supprimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="supprimer"
+            />
 
 
     </LinearLayout>

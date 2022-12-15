@@ -8,10 +8,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import com.google.android.material.button.MaterialButton;
 
 public class AdherentActivity extends AppCompatActivity {
     Button adherentliste;
     Button ajouteradherent;
+    Button modifieradherent;
+    MaterialButton supprimer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +38,23 @@ public class AdherentActivity extends AppCompatActivity {
                 Intent intent =new Intent(AdherentActivity.this, ajouteradherent.class);
                 startActivity(intent);
 
+            }
+        });
+        supprimer =(MaterialButton) findViewById(R.id.supprimer);
+        supprimer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(AdherentActivity.this,supprimeradherent.class);
+                startActivity(intent);
+            }
+        });
+         modifieradherent=(Button) findViewById(R.id.adhmodif);
+
+        modifieradherent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(AdherentActivity.this,modifieradherent.class);
+                startActivity(intent);
             }
         });
 
@@ -57,13 +79,21 @@ public class AdherentActivity extends AppCompatActivity {
                 break;
             }
             case R.id.Livre: {
+                Intent intent=new Intent(AdherentActivity.this,LivreActivity.class);
+                startActivity(intent);
+
                 break;
             }
             case R.id.Exemplaire:{
+                Intent intent=new Intent(AdherentActivity.this,ExemplaireActivity.class);
+                startActivity(intent);
 
                 break;
             }
             case R.id.Emprunt: {
+                Intent intent=new Intent(AdherentActivity.this,EmpruntActivity.class);
+                startActivity(intent);
+
                 break;
                 }
             case R.id.retour: {
@@ -72,6 +102,10 @@ public class AdherentActivity extends AppCompatActivity {
 
                 break;
 
+            }
+            case R.id.exit:{
+                System.exit(0);
+                break;
             }
         }
 

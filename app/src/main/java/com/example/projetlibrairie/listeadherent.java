@@ -1,5 +1,6 @@
 package com.example.projetlibrairie;
 
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,6 +10,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.button.MaterialButton;
@@ -50,7 +52,6 @@ public class listeadherent extends AppCompatActivity {
     private void loadadherents ()
     {   threadadherent thread=new threadadherent();
         thread.execute(recyclerView);
-
         /*
         RetrofitService retrofitService =new RetrofitService();
         AdherentApi adherentApi=   retrofitService.getRetrofit().create(AdherentApi.class);
